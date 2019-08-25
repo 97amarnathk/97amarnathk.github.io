@@ -28,7 +28,7 @@ twitter_username: 97amarnathk
 github_username:  97amarnathk
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jemoji
