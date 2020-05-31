@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "Google Summer of Code 2019 with CERN-HSF"
+title:  "Google Summer of Code 2019"
+excerpt: "This summer, as a part of my Google Summer of Code project, I worked with CERN-HSF on DiracGrid"
+tags: Open-Source Programming
 ---
-
-![Google Summer of Code](https://developers.google.com/open-source/gsoc/resources/downloads/GSoC-logo-horizontal-800.png)
-# Google Summer of Code 2019 with CERN-HSF : DIRACGrid
 
 This summer, I participated as a student developer in the Google Summer of Code Program. In this program, university students contribute towards an open source project between May and July, under the guidance of the project mentors. I was selected with [CERN-HSF](https://hepsoftwarefoundation.org/activities/gsoc.html) as my mentoring organisation.
 
@@ -23,12 +22,12 @@ My work was focussed on the _ResourceStatusSystem_(RSS) of DIRAC. This subsystem
 * Moving RSS from Python 2.7 to Python 3
 
 ## Mentors and Peers
-A big thanks to my mentors and fellow GSoC students who helped me solve countless doubts no matter how silly they were :smile:
+A big thanks to my mentors and fellow GSoC students who helped me 
 
-* [Federico Stagni](https://github.com/fstagni) : Mentor
-* [Zoltan Mathe](https://github.com/zmathe) : Mentor
-* [Christophe Haen](https://github.com/chaen) : Mentor
-* [Pujan Mehta](https://github.com/pujanm) : GSoC Student
+* [Federico Stagni](https://github.com/fstagni)
+* [Zoltan Mathe](https://github.com/zmathe)
+* [Christophe Haen](https://github.com/chaen)
+* [Pujan Mehta](https://github.com/pujanm)
 
 ## My Contributions
 

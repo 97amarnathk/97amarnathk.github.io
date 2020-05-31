@@ -1,0 +1,31 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+//@import "base", "layout", "syntax-highlighting";
+@import "@primer/css/support/index.scss";
+@import "@primer/css/core/index.scss";
+@import "@primer/css/product/index.scss";
+@import "@primer/css/markdown/index.scss";
+@import "@primer/css/utilities/index.scss";
+@import "@primer/css/layout/index.scss";
+@import "@primer/octicons/index.scss";
+
+@each $breakpoint, $variant in $responsive-variants {
+    @include breakpoint($breakpoint) {
+        // Note: the first iteration gets `$variant == ""`
+        .container-responsive#{$variant} {
+            max-width: map-get($breakpoints, $breakpoint);
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}
+
+.taglist {
+    list-style: none;
+
+    .licomma::after {
+        content: ",";
+    }
+}

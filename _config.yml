@@ -28,10 +28,23 @@ twitter_username: 97amarnathk
 github_username:  97amarnathk
 
 # Build settings
-theme: minima
+include: ['_pages', 'scripts']
 plugins:
   - jekyll-feed
   - jemoji
+  - jekyll-octicons
+
+sass:
+  # Where you keep your scss files
+  sass_dir: _sass/
+  # Where sass should look for other scss
+  load_paths:
+   - node_modules/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Exclude from processing.
 # The following items will not be processed, by default.
