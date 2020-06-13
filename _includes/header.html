@@ -1,22 +1,32 @@
-<nav class="Header py-lg-0 flex-wrap flex-lg-nowrap p-responsive flex-lg-justify-between flex-column flex-lg-row p-responsive">
-	<!-- Blog logo on left-->
-	<div class="Header-item flex-justify-between flex-items-center mr-0">
-		<a href="/" class="Header-link f4 d-flex flex-items-center">
-			<img class="octicon favicon mr-2" width="32" src="{{site.baseurl}}/assets/android-chrome-192x192.png">
-			<span>Amarnath Karthi</span>
-		</a>
+<nav class="">
+	<div
+		class="container-lg py-4 flex-wrap flex-md-nowrap p-responsive flex-md-justify-between flex-column flex-md-row p-responsive d-flex flex-items-center">
 
-		<div class="Header-link d-lg-none flex-self-end" id="header-responsive-toggle" onclick="toggle_header_links();">
-			<div class="" id="expand-nav-button">{% octicon three-bars width:24 %}</div>
-			<div class="d-none" id="contract-nav-button">{% octicon x width:24 %}</div>
+		<div class="flex-justify-between d-flex flex-justify-between flex-items-center flex-self-stretch">
+			<a href="/" class="d-flex flex-items-center muted-link">
+				<div class="f2 text-mono bg-gray-9 text-white d-inline px-2 py-0 rounded-2">amrnth></div>
+			</a>
+			<div class="close-button d-inline d-md-none" id="header-responsive-toggle flex-self-center" onclick="toggle_header_links();">
+				<div class="close-button" id="expand-nav-button">{% octicon three-bars width:20 %}</div>
+				<div class="d-none close-button" id="contract-nav-button">{% octicon x width:20 %}</div>
+			</div>
 		</div>
-	</div>
 
-	<!-- Nav links on right for large screens, hidden for smaller screens-->
-	<div class="Header-item d-lg-flex d-none flex-justify-center flex-column flex-lg-row flex-self-stretch mr-0 mt-3 mt-lg-0" id="header-links">
-		{% for page in site.pages %} {% if page.title %}
-			<a href="{{ page.url | prepend: site.baseurl }}" class="Header-link flex-self-stretch py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0">{{ page.title }}</a>
-		{% endif %} {% endfor %}
-			<a href="{{ "/blog" | prepend: site.baseurl }}" class="Header-link flex-self-stretch py-lg-3  mr-0 mr-lg-3 py-2 border-top border-lg-top-0">Blog</a>
+		<div class="d-md-flex flex-justify-center flex-column flex-md-row flex-self-stretch mt-2 mt-lg-0 d-none"
+			id="header-links">
+			{% for page in site.pages %}
+			{% if page.title %}
+			<div class="mr-0 mr-lg-3">
+				<a href="{{ page.url | prepend: site.baseurl }}"
+					class="btn btn-invisible link-gray-dark d-flex flex-justify-center flex-self-stretch py-2 text-mono text-normal f4">{{ page.title }}/</a>
+			</div>
+			{% endif %}
+			{% endfor %}
+			<div class="mr-0 mr-lg-3">
+				<a href="{{ "/blog" | prepend: site.baseurl }}"
+					class="btn btn-invisible link-gray-dark d-flex flex-justify-center flex-self-stretch py-2 text-mono text-normal f4">Blog/</a>
+			</div>
+			<hr>
+		</div>
 	</div>
 </nav>
