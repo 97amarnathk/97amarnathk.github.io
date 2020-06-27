@@ -10,14 +10,23 @@
 @import "@primer/css/utilities/index.scss";
 @import "@primer/css/layout/index.scss";
 @import "@primer/octicons/index.scss";
+@import "css/syntax.scss";
 
-@each $breakpoint, $variant in $responsive-variants {
-    @include breakpoint($breakpoint) {
-        // Note: the first iteration gets `$variant == ""`
-        .container-responsive#{$variant} {
-            max-width: map-get($breakpoints, $breakpoint);
-            margin-right: auto;
-            margin-left: auto;
+.markdown-body {
+    .highlight pre, 
+    .pre {
+        background: transparent;
+    }
+
+    .highlight {
+        border-radius: 0.3em;
+        box-shadow: 2px 4px 25px rgba(0,0,0,.15);
+    }
+
+    figure {
+        img {
+            border-radius: 0.3em;
+            //box-shadow: 2px 4px 25px rgba(0,0,0,.15);
         }
     }
 }

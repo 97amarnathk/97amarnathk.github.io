@@ -5,6 +5,10 @@
 
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
+  {% if site.google_analytics and jekyll.environment == 'production' %}
+  {% include analytics.html %}
+  {% endif %}
+
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel='icon' href='{{site.baseurl}}/assets/favicon.ico' type='image/x-icon' />
   <script src="{{"/scripts/toggle_header.js" | prepend: site.baseurl }}"> </script>
