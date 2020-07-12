@@ -23,6 +23,16 @@
         box-shadow: 2px 4px 25px rgba(0,0,0,.15);
     }
 
+    blockquote {
+        margin: 1.5 rem 0;
+        padding: 1rem;
+        background: $blue-000;
+        border-radius: 0.3rem;
+        border: 1px solid $blue-500;
+        border-left-width: 8px;
+        color: $bg-gray-dark;
+    }
+
     figure {
         img {
             border-radius: 0.3em;
