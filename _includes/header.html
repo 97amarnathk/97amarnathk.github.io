@@ -4,29 +4,9 @@
 
 		<div class="flex-justify-between d-flex flex-justify-between flex-items-center flex-self-stretch">
 			<a href="/" class="d-flex flex-items-center muted-link ">
-				<div class="f2 text-mono bg-gray-9 text-white d-inline px-2 py-0 rounded-2 ">amrnth></div>
+				<div class="f2 bg-gray-9 text-white d-inline px-2 py-0">News Today</div>
 			</a>
-			<div class="close-button d-inline d-md-none" id="header-responsive-toggle flex-self-center" onclick="toggle_header_links();">
-				<div class="close-button" id="expand-nav-button">{% octicon three-bars width:20 %}</div>
-				<div class="d-none close-button" id="contract-nav-button">{% octicon x width:20 %}</div>
-			</div>
 		</div>
 
-		<div class="d-md-flex flex-justify-center flex-column flex-md-row flex-self-stretch mt-2 mt-lg-0 d-none"
-			id="header-links">
-			{% for page in site.pages %}
-			{% if page.title %}
-			<div class="mr-0 mr-lg-3">
-				<a href="{{ page.url | prepend: site.baseurl }}"
-					class="btn btn-invisible link-gray-dark d-flex flex-justify-center flex-self-stretch py-2 text-mono text-normal f4">{{ page.title }}/</a>
-			</div>
-			{% endif %}
-			{% endfor %}
-			<div class="mr-0 mr-lg-3">
-				<a href="{{ "/blog" | prepend: site.baseurl }}"
-					class="btn btn-invisible link-gray-dark d-flex flex-justify-center flex-self-stretch py-2 text-mono text-normal f4">Blog/</a>
-			</div>
-			<hr>
-		</div>
 	</div>
 </nav>
