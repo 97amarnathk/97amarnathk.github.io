@@ -1,7 +1,10 @@
 {
   "dependencies": {
     "@primer/css": "^15.2.0",
+    "@primer/octicons-react": "^11.2.0",
     "gatsby": "^2.29.3",
+    "gatsby-plugin-sass": "^2.8.0",
+    "node-sass": "^4.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
