@@ -4,7 +4,7 @@ import Header from "../components/header";
 
 export function DefaultLayout({ children }) {
   return (
-    <div class="h-screen flex flex-col border-green-400 border-2">
+    <div class="h-screen flex flex-col">
     <Header/>
     <div class = "flex-grow" >
       {children}

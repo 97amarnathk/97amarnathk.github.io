@@ -1,11 +1,12 @@
 import React from "react";
+import { DefaultLayout } from "../layouts/defaultLayout";
 
-export default function Home() {
+export default function About() {
   return (
-    <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
+    <DefaultLayout>
       <h1>About Page</h1>
       <p>Lorem ipsum dolores</p>
       <button class="primary-button">Click me</button>
-    </div>
+    </DefaultLayout>
   );
 }
