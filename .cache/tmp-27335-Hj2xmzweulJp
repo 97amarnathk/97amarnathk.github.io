@@ -1,0 +1,5 @@
+
+    const cmd = require("/Users/97amarnathk/Documents/Github/97amarnathk.github.io/node_modules/gatsby/dist/commands/develop-process.js");
+    const args = {"_":["develop"],"verbose":true,"no-color":false,"no-colors":false,"noColors":false,"noColor":false,"json":false,"H":"localhost","host":"localhost","p":"8000","port":61236,"c":"","cert-file":"","certFile":"","k":"","key-file":"","keyFile":"","ca-file":"","caFile":"","graphql-tracing":false,"graphqlTracing":false,"$0":"gatsby","directory":"/Users/97amarnathk/Documents/Github/97amarnathk.github.io","browserslist":[">0.25%","not dead"],"sitePackageJson":{"dependencies":{"@primer/octicons-react":"^11.2.0","autoprefixer":"^10.1.0","gatsby":"^2.29.3","gatsby-plugin-feed":"^2.10.0","gatsby-plugin-postcss":"^3.4.0","gatsby-plugin-sass":"^2.8.0","node-sass":"^4.0.0","postcss":"^8.2.2","react":"^17.0.1","react-dom":"^17.0.1","tailwindcss":"^2.0.2"}},"report":{"errorMap":{}},"useYarn":true,"proxyPort":8000,"ssl":null,"debugInfo":null};
+    cmd(args);
+  
