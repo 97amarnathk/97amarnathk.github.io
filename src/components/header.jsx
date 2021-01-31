@@ -9,8 +9,8 @@ export default function Header() {
         <SiteLogo/>
       </a>
       <div class="flex flex-grow justify-end">
-        <HeaderLink name="About/" href = "/about"/>
-        <HeaderLink name="Blog/" href = "/blog"/>
+        <HeaderLink  href = "/about">{"About/"}</HeaderLink>
+        <HeaderLink href = "/blog">{"Blog/"}</HeaderLink>
       </div>
       </div>
       
@@ -21,7 +21,7 @@ export default function Header() {
 function HeaderLink(props) {
   return (
   <div class="mx-4">
-    <a href={props.href} class="font-mono text-xl hover:underline">{props.name}</a>
+    <a href={props.href} class="font-mono text-xl hover:underline">{props.children}</a>
   </div>
   )
 }
