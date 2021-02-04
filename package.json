@@ -1,11 +1,16 @@
 {
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "@primer/octicons-react": "^11.2.0",
     "autoprefixer": "^10.1.0",
+    "date-fns": "^2.16.1",
     "gatsby": "^2.29.3",
     "gatsby-plugin-feed": "^2.10.0",
+    "gatsby-plugin-mdx": "^1.10.0",
     "gatsby-plugin-postcss": "^3.4.0",
     "gatsby-plugin-sass": "^2.8.0",
+    "gatsby-source-filesystem": "^2.11.0",
     "node-sass": "^4.0.0",
     "postcss": "^8.2.2",
     "react": "^17.0.1",

@@ -1,3 +1,5 @@
+import { format } from 'date-fns';
+import { useStaticQuery } from "gatsby";
 import React from "react";
 
 export function RecentPosts(props) {
@@ -19,28 +21,44 @@ export function ViewAllButton(props) {
   return (
     <div class=" px-2 flex border space-x-1 rounded-md text-gray-500 hover:bg-gray-100 hover:text-blue-600">
       <div class=" text-sm self-center font-medium">View all</div>
-      <svg class="self-center stroke-2 h-3 w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+      <svg class="self-center h-3 w-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M14 5l7 7m0 0l-7 7m7-7H3" />
       </svg>
     </div>
   )
 }
 
 export function BlogsList(props) {
+
+  const data = useStaticQuery(graphql`
+  query SITE_INDEX_QUERY {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } } }
+    ) {
+      nodes {
+        id
+        frontmatter {
+          title
+          date
+          tags
+          excerpt
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`)
+
+  const BlogsList = data.allMdx.nodes.map(({ frontmatter }) => {
+    return <BlogsListElement date={format(new Date(frontmatter.date), "MMM dd, yyyy")} tags={frontmatter.tags} title={frontmatter.title} summary={frontmatter.excerpt} />
+  })
+
   return (
     <div class="flex flex-col space-y-8">
-      <BlogsListElement
-        date="Aug 1, 2020"
-        tags={["Tools"]}
-        title="My macOS Terminal setup"
-        summary="A guide to setting up terminal on macOS with iTerm and ZSH"
-      />
-      <BlogsListElement
-        date="Aug 25, 2019"
-        tags={["Open-Source", "Programming"]}
-        title="Google Summer of Code 2019"
-        summary="This summer, as a part of my Google Summer of Code project, I worked with CERN-HSF on DiracGrid"
-      />
+      {BlogsList}
     </div>
   )
 }
