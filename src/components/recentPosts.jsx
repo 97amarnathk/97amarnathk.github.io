@@ -6,7 +6,7 @@ export function RecentPosts(props) {
   return (
     <div class="mx-auto max-w-4xl space-y-12">
 
-      <div class="flex space-x-2 mb-4">
+      <div class="flex space-x-2 mb-4 ">
         <div class="text-2xl font-semibold">Recent Posts</div>
         <ViewAllButton />
       </div>
@@ -52,8 +52,8 @@ export function BlogsList(props) {
   }
 `)
 
-  const BlogsList = data.allMdx.nodes.map(({ frontmatter }) => {
-    return <BlogsListElement date={format(new Date(frontmatter.date), "MMM dd, yyyy")} tags={frontmatter.tags} title={frontmatter.title} summary={frontmatter.excerpt} />
+  const BlogsList = data.allMdx.nodes.map(({ frontmatter, fields }) => {
+    return <BlogsListElement date={format(new Date(frontmatter.date), "MMM dd, yyyy")} tags={frontmatter.tags} title={frontmatter.title} summary={frontmatter.excerpt} frontmatter={frontmatter} fields={fields} />
   })
 
   return (
@@ -64,16 +64,18 @@ export function BlogsList(props) {
 }
 
 export function BlogsListElement(props) {
-  const tagsList = props.tags.join(", ")
+  const { tags: tagsList, date: rawDate, title, excerpt } = props.frontmatter
+  const tags = tagsList.join(", ")
+  const date = format(new Date(rawDate), "MMM dd, yyyy")
   return (
     <div class="flex">
-      <div class="w-1/5 " ><p class="text-base text-gray-600 font-mono">{props.date}</p></div>
+      <div class="w-1/5 " ><p class="text-base text-gray-600 font-mono">{date}</p></div>
       <div class="w-4/5 space-y-2 max-w-lg ">
         <div>
-          <p class="text-base text-gray-600 font-mono">{tagsList}</p>
+          <p class="text-base text-gray-600 font-mono">{tags}</p>
         </div>
-        <div><h4 class="text-xl font-semibold">{props.title}</h4></div>
-        <div><p class="text-base text-gray-600">{props.summary}</p></div>
+        <a href={props.fields.slug} class="hover:text-blue-700 text-xl font-semibold hover:underline">{title}</a>
+        <div><p class="text-base text-gray-600">{excerpt}</p></div>
       </div>
     </div>
   )
