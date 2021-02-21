@@ -1,3 +1,123 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.markdown {
+  @apply leading-relaxed text-base;
+}
+
+@screen sm {
+  .markdown {
+    @apply text-sm;
+  }
+}
+
+@screen lg {
+  .markdown {
+    @apply text-base;
+  }
+}
+
+/* Headers */
+.markdown h1 {
+  @apply pb-1 mt-6 mb-4;
+  @apply text-3xl font-semibold;
+  @apply border-b;
+}
+,
+.markdown h2 {
+  @apply pb-1 mt-6 mb-4;
+  @apply text-2xl font-semibold;
+  @apply border-b;
+}
+
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  @apply my-3 text-lg font-semibold;
+}
+
+@screen sm {
+  .markdown h1,
+  .markdown h2 {
+    @apply text-2xl;
+  }
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    @apply text-xl;
+  }
+}
+
+/* Links */
+.markdown a {
+  @apply text-blue-700;
+}
+.markdown a:hover {
+  @apply underline;
+}
+
+/* Paragraph */
+.markdown p {
+  @apply mb-4;
+}
+
+/* bold */
+.markdown strong {
+  @apply font-semibold;
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+  @apply mb-4 ml-8;
+}
+.markdown li > p,
+.markdown li > ul,
+.markdown li > ol {
+  @apply mb-0;
+}
+.markdown ol {
+  @apply list-decimal;
+}
+.markdown ul {
+  @apply list-disc;
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  @apply p-2 mx-6 bg-gray-100 mb-4 border-l-4 border-gray-400 italic;
+}
+.markdown blockquote > p {
+  @apply mb-0;
+}
+
+/* Tables */
+.markdown thead {
+  @apply font-semibold;
+}
+.markdown td,
+.markdown th {
+  @apply px-2 py-1 border border-gray-200;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.markdown tr:nth-child(even) {
+  @apply bg-gray-100;
+}
+.markdown table {
+  @apply mb-6;
+}
+
+/* Wrap any inline highlights `that are really long`, but don't modify
+   the setting for codeblocks (inside ```), which are rendered in as:
+   <pre><code>...
+*/
+.markdown :not(pre) > code {
+  white-space: pre-line;
+  font-size: inherit;
+  @apply px-1 bg-gray-100;
+}
