@@ -1,5 +1,5 @@
 import { format } from 'date-fns';
-import { useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 
 export function RecentPosts(props) {
