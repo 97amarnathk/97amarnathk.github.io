@@ -4,11 +4,9 @@ title: About
 permalink: /about/
 ---
 
-## Hi There
+:wave: Hi There. I am Amarnath, Software Engineer at [Stripe](https://stripe.com/)
 
-I am Amarnath, Software Engineer at [Stripe](https://stripe.com/)
-
-My interests primarily in backend engineering, distributed systems.
+My interests primarily in backend engineering, distributed systems. 
 
 When not working I like travelling, hiking, reading books and watching anime 
 
