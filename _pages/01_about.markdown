@@ -4,11 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Hi, I am Amarnath. 
+## Hi There
 
-I work as a software engineer in the backend engineering team at [Lyearn](https://www.lyearn.com).
+I am Amarnath, Software Engineer at [Stripe](https://stripe.com/)
 
-When I am not working or procrastinating, I like to watch anime and (try to) read books.
+My interests primarily in backend engineering, distributed systems.
+
+When not working I like travelling, hiking, reading books and watching anime 
 
 You can read my blog posts [here]({% link blog/index.html %})
 
