@@ -31,3 +31,4 @@ gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
 # my plugins
 gem 'jemoji'
+gem "webrick", "~> 1.8"
