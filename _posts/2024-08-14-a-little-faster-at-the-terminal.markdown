@@ -5,4 +5,16 @@ excerpt: "Some commands and tricks to navigate the terminal better"
 tags: Tools Terminal
 ---
 
-Hello world
+* basic navigation
+    * ctrl a
+    * ctrl e
+* searching past commands
+    * `reverse-i-search`
+    * `history`
+* exploring log files
+    * `tail`
+    * `head`
+    * `grep`
+    * `vim`
+    * iterm highlight
+    * `cat`
