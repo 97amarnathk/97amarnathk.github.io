@@ -47,6 +47,8 @@ highlighter: rouge
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  kramdown:
+    auto_ids: true
   syntax_highlighter_opts:
     css_class   : 'syntax'
 

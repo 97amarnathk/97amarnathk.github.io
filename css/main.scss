@@ -24,6 +24,10 @@
         box-shadow: 2px 4px 25px rgba(0,0,0,.15);
     }
 
+    .header-link {
+        color: inherit;
+    }
+
     blockquote {
         margin: 1.5 rem 0;
         padding: 1rem;
@@ -40,6 +44,7 @@
             //box-shadow: 2px 4px 25px rgba(0,0,0,.15);
         }
     }
+
 }
 
 .taglist {
